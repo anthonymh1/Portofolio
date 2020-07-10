@@ -1,0 +1,575 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    background-image: url(./imgs/background1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #F2F2F2;
+    
+}
+
+/* Clouds + animations */
+
+.cloud1 {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 8%;
+    animation-name: cloudanimation1;
+    animation:cloudanimation1 100s infinite;
+
+}
+
+@keyframes cloudanimation1 {
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 40%;
+    }
+    100% {
+        left: 0%;
+    }
+
+
+
+}
+
+.cloud2 {
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 8%;
+    animation-name: cloudanimation;
+    animation:cloudanimation2 100s infinite;
+
+}
+
+@keyframes cloudanimation2 {
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 45%;
+    }
+    100% {
+        left: 0%;
+    }
+
+
+
+}
+
+.cloud3 {
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 10%;
+    animation-name: cloudanimation;
+    animation:cloudanimation3 100s infinite;
+
+}
+
+@keyframes cloudanimation3 {
+    0% {
+        right: 15%;
+    }
+    50% {
+        right: 45%;
+    }
+    100% {
+        right: 15%;
+    }
+
+
+
+}
+
+.cloud4 {
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 8%;
+    animation-name: cloudanimation;
+    animation:cloudanimation4 100s infinite;
+
+}
+
+@keyframes cloudanimation4 {
+    0% {
+        right: 0%;
+    }
+    50% {
+        right: 75%;
+    }
+    100% {
+        right: 0%;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width:600px){
+.cloud1 {
+    margin: auto;
+}
+.cloud2 {
+    margin: auto;
+}
+.cloud3 {
+    margin: auto;
+}
+.cloud4 {
+    margin: auto;
+}
+}
+
+
+
+
+header {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+    
+  }
+  
+  
+  
+  .introduction {
+    font-family: Ink Free;
+    text-align: center;
+    font-size: auto;
+    color: rgb(98, 120, 160);
+    position: sticky;
+    margin-top: 70vh;
+    
+    
+  }
+  
+  
+  
+  .nav-links {
+    display: flex;
+    margin-left: 0;
+   
+  }
+  
+  nav{
+      
+    flex: 2;
+  }
+  
+  .nav-links {
+    flex: 1;
+  }
+  
+  
+  
+  
+  .nav-links {
+    justify-content: space-around;
+    list-style: none;
+    
+  }
+  
+  .nav-link {
+    color: rgb(98, 120, 160);
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Ink Free;
+    font-weight: 700;
+  }
+  
+  .avatar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
+    margin-bottom: 10vh;
+    display: flex;
+  }
+  
+  about {
+    font-family: Ink Free;
+    text-align: center;
+    font-size: auto;
+    color: rgb(98, 120, 160);  
+  }
+
+
+
+/*Coding related percentage bar + text*/
+
+
+.container .card {
+ position: relative;
+ width: 250px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 300px;
+ border-radius: 4px;
+ text-align: center;
+ overflow: hidden;
+ transition: 0.5s;
+ 
+
+}
+.container .card:hover  {
+    transform: translateY(-10px);
+    
+}
+.container .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.percent {
+    position: relative; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px transparent;
+    background: transparent;
+    z-index: 1000;
+
+}
+
+.percent .number {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.percent .number h2 {
+    color: #777;
+    font-weight: 700;
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+.percent .number h2 span {
+    font-size: 24px;
+    color: #777;
+}
+
+.card:hover .percent .number h2 span {
+    font-size: 24px;
+    color: rgb(149, 219, 121);
+    transition: 0.2s;
+}
+
+.text {
+    position: relative;
+    color: rgb(98, 120, 160) ;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card:hover .percent .number h2{
+    color: rgb(149, 219, 121);
+    font-size:55px
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+
+svg circle {
+    height: 100%;
+    width: 100%;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+
+}
+
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 65) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+.card:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    width: 80%;
+    
+    margin: auto;
+    justify-content: space-around;
+    font-family: Ink Free;
+}
+
+.tns {
+    font-family: Ink Free;
+    text-align: center;
+    font-size: auto;
+    color: rgb(149, 219, 121);
+    margin: 10px;
+    
+   
+}
+#tns1 {
+
+    margin-top: 40vh;
+}
+
+@media screen  (max-width:1200px){
+    .box{
+        width: 40%;
+    }
+}
+
+@media screen  (max-width:600px){
+    .box{
+        width: 90%;
+    }
+}
+
+
+
+/*Design related percentage bar*/
+
+.card2:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+.card2:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+.card2:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 65) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+.card2:nth-child(4) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 65) / 100);
+    stroke : rgb(98, 120, 160);
+}
+
+.card2:hover .percent .number h2{
+    color: rgb(149, 219, 121);
+    font-size:55px
+}
+
+.card2:hover .percent .number h2 span {
+    font-size: 24px;
+    color: rgb(149, 219, 121);
+    transition: 0.2s;
+}
+
+.container .card2 {
+    position: relative;
+    width: 250px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+   
+   }
+
+.container .card2:hover  {
+    transform: translateY(-10px);
+    
+}
+.container .card2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mywork {
+    font-family: Ink Free;
+    text-align: center;
+    font-size: auto;
+    color: rgb(149, 219, 121);
+    margin: 20px;
+    margin-top: 30vh;
+    margin-bottom: 10vh;
+}
+
+.work{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    
+    
+    margin: auto;
+
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+.imgs {
+    width: 300px;
+    height: 150px ;
+    margin: 10px;
+  
+}
+
+.work :hover  {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+
+
+
+
+/** footer **/
+
+
+
+
+
+  .footer-right{
+   
+   flex: 1;
+
+   
+  }
+  .footer-left{
+      flex: 4;
+  }
+
+  .imgs1 {
+    
+      
+      height: 80px;
+      width: 80px;
+  }
+  
+  .footer-distributed {
+    margin-top: 20vh;
+      display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+  }
+  
+  .footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 22px;
+    margin: 0;
+    font-family: Ink Free;
+  }
+  /* Footer links */
+
+
+  
+
+
+
+  .footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  height: 36px;
+  width: 100px;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: Ink Free;
+}
+  
+
+  /* Media Queries */
+  
+  @media (max-width: 600px) {
+    .footer-left,  .footer-right {
+      text-align: center;
+    }
+    .footer-right {
+     margin-top: 30px;
+    }
+    .footer-left p.footer-links {
+      line-height: 1.8;
+      justify-content: center;
+      align-items: center;
+    }
+   .fbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+   }
+
+   .footer-distributed{
+       flex-flow: column;
+   }
+  }
