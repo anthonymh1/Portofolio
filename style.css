@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+@font-face {
+    font-family: Ink Free;
+    src: url(./fonts/ink-free-normal.ttf);
+  }
 
 body {
     background-image: url(./imgs/background1.svg);
